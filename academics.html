@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Academics | MoonStar Global School</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* ACADEMICS HEADER */
+
+.academics-header{
+padding:90px 15% 60px;
+text-align:center;
+background:linear-gradient(135deg,#0b2c5c,#163d7a);
+color:white;
+}
+
+.academics-header h1{
+font-size:44px;
+margin-bottom:10px;
+}
+
+.academics-header p{
+font-size:18px;
+opacity:0.9;
+max-width:700px;
+margin:auto;
+}
+
+/* PROGRAMS */
+
+.programs{
+padding:80px 10%;
+text-align:center;
+}
+
+.program-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+/* CARD */
+
+.program-card{
+background:white;
+border-radius:12px;
+box-shadow:0 8px 25px rgba(0,0,0,0.1);
+transition:0.35s;
+overflow:hidden;
+}
+
+/* IMAGE */
+
+.program-card img{
+width:100%;
+height:160px;
+object-fit:cover;
+}
+
+/* COLORED IMAGE BORDER */
+
+.green-card img{border-bottom:4px solid #27ae60;}
+.red-card img{border-bottom:4px solid #e74c3c;}
+.blue-card img{border-bottom:4px solid #3498db;}
+.yellow-card img{border-bottom:4px solid #f1c40f;}
+
+/* TEXT AREA */
+
+.program-card .card-content{
+padding:35px;
+}
+
+.program-card h3{
+color:#0b2c5c;
+margin-bottom:6px;
+}
+
+/* CLASS LEVEL TEXT */
+
+.class-level{
+font-size:13px;
+font-weight:600;
+margin-bottom:12px;
+letter-spacing:1px;
+}
+
+/* COLORS */
+
+.green-card .class-level{color:#27ae60;}
+.red-card .class-level{color:#e74c3c;}
+.blue-card .class-level{color:#3498db;}
+.yellow-card .class-level{color:#f1c40f;}
+
+/* HOVER */
+
+.program-card:hover{
+transform:translateY(-10px) scale(1.03);
+box-shadow:0 18px 40px rgba(0,0,0,0.22);
+}
+
+/* HOVER GLOW */
+
+.green-card:hover{
+box-shadow:0 18px 40px rgba(0,0,0,0.22),0 0 18px rgba(39,174,96,0.45);
+}
+
+.red-card:hover{
+box-shadow:0 18px 40px rgba(0,0,0,0.22),0 0 18px rgba(231,76,60,0.45);
+}
+
+.blue-card:hover{
+box-shadow:0 18px 40px rgba(0,0,0,0.22),0 0 18px rgba(52,152,219,0.45);
+}
+
+.yellow-card:hover{
+box-shadow:0 18px 40px rgba(0,0,0,0.22),0 0 18px rgba(241,196,15,0.45);
+}
+
+/* COLORED EDGE GLOW HOVER */
+
+.green-card:hover{
+border:2px solid #27ae60;
+}
+
+.red-card:hover{
+border:2px solid #e74c3c;
+}
+
+.blue-card:hover{
+border:2px solid #3498db;
+}
+
+.yellow-card:hover{
+border:2px solid #f1c40f;
+}
+
+/* SUBJECTS */
+
+.subjects{
+padding:80px 10%;
+background:#f5f5f5;
+text-align:center;
+}
+
+.subject-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+margin-top:35px;
+}
+
+.subject{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 5px 18px rgba(0,0,0,0.08);
+font-weight:600;
+}
+
+/* SUBJECT CARDS PREMIUM EFFECT */
+
+.subject{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 5px 18px rgba(0,0,0,0.08);
+font-weight:600;
+
+position:relative;
+overflow:hidden;
+
+transition:
+transform 0.35s cubic-bezier(.22,1,.36,1),
+box-shadow 0.35s ease,
+border 0.35s ease;
+
+border:2px solid transparent;
+}
+
+/* GOLDEN SHIMMER SWEEP */
+
+.subject::before{
+
+content:"";
+
+position:absolute;
+
+top:-120%;
+left:-120%;
+
+width:240%;
+height:240%;
+
+background:linear-gradient(
+120deg,
+transparent,
+rgba(198,167,74,0.25),
+transparent
+);
+
+transform:rotate(25deg);
+
+animation:subjectShimmer 7s linear infinite;
+
+pointer-events:none;
+
+}
+
+@keyframes subjectShimmer{
+
+0%{transform:translateX(-100%) rotate(25deg);}
+100%{transform:translateX(100%) rotate(25deg);}
+
+}
+
+/* GLASS CRACK LINES */
+
+.subject::after{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:0;
+width:100%;
+height:100%;
+
+background:
+linear-gradient(60deg,transparent 45%,rgba(255,255,255,0.25) 50%,transparent 55%),
+linear-gradient(120deg,transparent 45%,rgba(255,255,255,0.18) 50%,transparent 55%);
+
+opacity:0;
+transition:opacity 0.4s ease;
+
+pointer-events:none;
+
+}
+
+/* HOVER EFFECT */
+
+.subject:hover{
+
+transform:translateY(-8px) scale(1.04);
+
+border:2px solid #c6a74a;
+
+box-shadow:
+0 18px 40px rgba(0,0,0,0.22),
+0 0 18px rgba(198,167,74,0.45);
+
+}
+
+/* GLASS SHATTER VISUAL */
+
+.subject:hover::after{
+opacity:1;
+}
+
+/* TEACHING APPROACH */
+
+.teaching{
+padding:80px 15%;
+text-align:center;
+}
+
+.teaching p{
+max-width:800px;
+margin:auto;
+line-height:1.7;
+}
+
+/* CTA */
+
+.academic-cta{
+background:#c6a74a;
+color:white;
+text-align:center;
+padding:70px 20px;
+}
+
+.academic-cta button{
+margin-top:20px;
+}
+
+/* ACADEMIC CTA BUTTON FIX */
+
+.academic-cta .btn-primary{
+background:white;
+color:#0b2c5c;
+}
+
+.academic-cta .btn-primary:hover{
+background:#0b2c5c;
+color:white;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="stars"></div>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<div class="logo">
+<img src="https://media.licdn.com/dms/image/v2/C511BAQHAYNfs-Qr2OA/company-background_10000/company-background_10000/0/1584406878922/moonstarschool1_cover?e=2147483647&v=beta&t=-JOgz-lD-unbm03pmieevahVI9w7Ju2omg94nz6KVQU">
+</div>
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="academics.html" class="active">Academics</a></li>
+
+<li><a href="#">Facilities</a></li>
+
+<li><a href="#">Contact</a></li>
+
+<div class="nav-indicator"></div>
+
+</ul>
+
+</nav>
+
+
+<!-- HEADER -->
+
+<section class="academics-header">
+
+<h1>Academic Excellence</h1>
+
+<p>
+At MoonStar Global School we follow the CBSE curriculum with a strong
+focus on critical thinking, creativity and real-world learning.
+</p>
+
+</section>
+
+
+<!-- PROGRAMS -->
+
+<section class="programs">
+
+<h2>Our Academic Programs</h2>
+
+<div class="program-grid">
+
+<div class="program-card green-card">
+
+<img src="">
+
+<div class="card-content">
+<h3>Pre-Primary</h3>
+
+<div class="class-level">NURSERY · KG</div>
+
+<p>
+Building strong foundations in literacy, numeracy, creativity and
+curiosity through engaging learning experiences.
+</p>
+</div>
+
+</div>
+
+
+<div class="program-card red-card">
+
+<img src="">
+
+<div class="card-content">
+<h3>Primary School</h3>
+
+<div class="class-level">CLASS I – V</div>
+
+<p>
+Students explore deeper academic concepts while developing analytical
+skills, teamwork and independent learning.
+</p>
+</div>
+
+</div>
+
+
+<div class="program-card blue-card">
+
+<img src="">
+
+<div class="card-content">
+<h3>Secondary School</h3>
+
+<div class="class-level">CLASS VI – X</div>
+
+<p>
+Focused academic preparation for board examinations and future
+career pathways with advanced subject learning.
+</p>
+</div>
+
+</div>
+
+
+<div class="program-card yellow-card">
+
+<img src="">
+
+<div class="card-content">
+<h3>Higher Secondary</h3>
+
+<div class="class-level">CLASS XI – XII</div>
+
+<p>
+Advanced coursework and career guidance preparing students for
+university and future professional opportunities.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</section>
+
+<!-- STUDENT ACHIEVEMENTS -->
+
+<section class="achievements">
+
+<div class="achievements-track">
+
+<div class="achievement">🏆 CBSE Board Exam Top Rankers</div>
+
+<div class="achievement">🥇 National Science Olympiad Medalists</div>
+
+<div class="achievement">💻 Coding Competition Champions</div>
+
+<div class="achievement">📚 State Level Debate Competition Winners</div>
+
+<div class="achievement">🎓 100% Board Examination Success Rate</div>
+
+</div>
+
+</section>
+
+
+<!-- SUBJECTS -->
+
+
+<!-- SUBJECTS -->
+
+<section class="subjects">
+
+<h2>Subjects We Offer</h2>
+
+<div class="subject-grid">
+
+<div class="subject">Mathematics</div>
+<div class="subject">Science</div>
+<div class="subject">English</div>
+<div class="subject">Social Studies</div>
+<div class="subject">Computer Science</div>
+<div class="subject">Physical Education</div>
+<div class="subject">Art & Music</div>
+<div class="subject">Languages</div>
+
+</div>
+
+</section>
+
+
+<!-- CURRICULUM OVERVIEW -->
+
+<section class="curriculum">
+
+<h2>Our Curriculum</h2>
+
+<p class="curriculum-intro">
+MoonStar Global School follows the CBSE curriculum designed to nurture
+critical thinking, creativity and academic excellence. Our approach blends
+modern teaching methods, technology and activity-based learning.
+</p>
+
+<div class="curriculum-grid">
+
+<div class="curriculum-card">
+<h3>CBSE Framework</h3>
+<p>
+Structured academic progression aligned with CBSE guidelines to ensure
+strong conceptual understanding and academic success.
+</p>
+</div>
+
+<div class="curriculum-card">
+<h3>Skill-Based Learning</h3>
+<p>
+Students develop real-world skills through projects, collaboration and
+hands-on activities across all subjects.
+</p>
+</div>
+
+<div class="curriculum-card">
+<h3>Smart Classrooms</h3>
+<p>
+Interactive digital boards and multimedia learning tools enhance
+student engagement and understanding.
+</p>
+</div>
+
+<div class="curriculum-card">
+<h3>Continuous Evaluation</h3>
+<p>
+Regular assessments, projects and feedback ensure students grow
+academically and build confidence.
+</p>
+</div>
+
+</div>
+
+</section>
+<!-- ACADEMIC DEPARTMENTS -->
+
+<section class="departments">
+
+<h2>Academic Departments</h2>
+
+<div class="department-grid">
+
+<div class="department-card">
+<h3>Mathematics</h3>
+<p>Developing logical thinking and problem-solving skills.</p>
+</div>
+
+<div class="department-card">
+<h3>Science</h3>
+<p>Hands-on experiments and inquiry-based learning.</p>
+</div>
+
+<div class="department-card">
+<h3>Languages</h3>
+<p>Strong communication skills through English and regional languages.</p>
+</div>
+
+<div class="department-card">
+<h3>Computer Science</h3>
+<p>Programming, coding competitions and digital literacy.</p>
+</div>
+
+<div class="department-card">
+<h3>Arts & Humanities</h3>
+<p>Encouraging creativity, culture and critical thinking.</p>
+</div>
+
+</div>
+
+</section>
+<!-- ASSESSMENT SYSTEM -->
+
+<section class="assessment">
+
+<h2>Assessment & Evaluation</h2>
+
+<div class="assessment-grid">
+
+<div class="assessment-card">
+<h3>Unit Tests</h3>
+<p>Short assessments to track student understanding.</p>
+</div>
+
+<div class="assessment-card">
+<h3>Mid-Term Exams</h3>
+<p>Comprehensive evaluation of academic progress.</p>
+</div>
+
+<div class="assessment-card">
+<h3>Project Work</h3>
+<p>Students apply concepts through research and presentations.</p>
+</div>
+
+<div class="assessment-card">
+<h3>Final Examinations</h3>
+<p>Formal assessments aligned with CBSE standards.</p>
+</div>
+
+</div>
+
+</section>
+<!-- LEARNING RESOURCES -->
+
+<section class="resources">
+
+<h2>Learning Resources</h2>
+
+<div class="resource-grid">
+
+<div class="resource">📚 Digital Library</div>
+<div class="resource">💻 Computer Laboratories</div>
+<div class="resource">🧪 Science Laboratories</div>
+<div class="resource">📊 Smart Classrooms</div>
+<div class="resource">🌐 E-Learning Platforms</div>
+<div class="resource">📖 Research Projects</div>
+
+</div>
+
+</section>
+<!-- ACADEMIC JOURNEY -->
+
+<section class="academic-timeline">
+
+<h2>Academic Journey</h2>
+
+<div class="timeline">
+
+<div class="timeline-step">
+<h3>Foundation Stage</h3>
+<p>Early learning focusing on creativity, curiosity and exploration.</p>
+</div>
+
+<div class="timeline-step">
+<h3>Primary Development</h3>
+<p>Building strong academic fundamentals and communication skills.</p>
+</div>
+
+<div class="timeline-step">
+<h3>Secondary Learning</h3>
+<p>Advanced subject knowledge and critical thinking development.</p>
+</div>
+
+<div class="timeline-step">
+<h3>Higher Secondary</h3>
+<p>Career-oriented academic preparation and university readiness.</p>
+</div>
+
+</div>
+
+</section>
+<!-- ACADEMIC ACHIEVEMENTS -->
+
+<section class="academic-achievements">
+
+<h2>Academic Achievements</h2>
+
+<div class="achievement-grid">
+
+<div class="achievement-card">
+<h3>100%</h3>
+<p>Board Examination Pass Rate</p>
+</div>
+
+<div class="achievement-card">
+<h3>50+</h3>
+<p>Olympiad Medals</p>
+</div>
+
+<div class="achievement-card">
+<h3>20+</h3>
+<p>National Competition Awards</p>
+</div>
+
+<div class="achievement-card">
+<h3>15+</h3>
+<p>University Placements</p>
+</div>
+
+</div>
+
+</section>
+<!-- STUDENT SUPPORT -->
+
+<section class="student-support">
+
+<h2>Student Support Programs</h2>
+
+<div class="support-grid">
+
+<div class="support-card">
+<h3>Remedial Classes</h3>
+<p>Additional support for students who need academic assistance.</p>
+</div>
+
+<div class="support-card">
+<h3>Gifted Programs</h3>
+<p>Advanced learning opportunities for high-performing students.</p>
+</div>
+
+<div class="support-card">
+<h3>Career Guidance</h3>
+<p>Professional counseling for stream selection and university planning.</p>
+</div>
+
+<div class="support-card">
+<h3>Academic Mentoring</h3>
+<p>Teachers guide students individually for academic success.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- TEACHING APPROACH -->
+
+<section class="teaching">
+
+<h2>Our Teaching Approach</h2>
+
+<p>
+Our educators combine modern teaching techniques, technology-enabled
+classrooms and project-based learning to make education interactive and
+engaging. Students are encouraged to ask questions, explore ideas and
+develop the confidence to solve real-world problems.
+</p>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="academic-cta">
+
+<h2>Begin Your Academic Journey</h2>
+
+<p>Admissions are open for the upcoming academic year.</p>
+
+<button class="btn-primary">Apply for Admission</button>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>© 2026 MoonStar Global School. All Rights Reserved.</p>
+
+<p>CBSE Affiliated · Government Recognised Institution</p>
+
+<p>Last Updated: March 2026</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
